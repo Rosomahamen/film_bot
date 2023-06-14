@@ -51,8 +51,8 @@ async def name(update, context):
         if c[1] in a:  
             string_out = f"{c[1]}: {', '.join(a.get(c[1]))}"
         else:
-            string_out = None
-    await update.message.reply_text(string_out)
+            string_out = "Фільм не знайдено"
+        await update.message.reply_text(string_out)
 
 
 async def year(update, context):
