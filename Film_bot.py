@@ -62,7 +62,7 @@ async def year(update, context):
         string_out = "напишіть команду, двокрапку і через пробіл рік"
         await update.message.reply_text(string_out)
     else:
-        c = string_in.split(' ')
+        c = string_in.split(': ')
         b = c[1]
         matching_movies = [] 
         for key, value in a.items():
@@ -105,7 +105,7 @@ async def director(update, context):
     global a
     string_in = update.message.text
     if string_in == "/director":
-        string_out = "напишіть команду, двокрапку і через пробіл режисера типу так:/director: Роб_Коен"
+        string_out = "напишіть команду, двокрапку і через пробіл режисера типу так:/director: Роб Коен"
         await update.message.reply_text(string_out)
     else:
         c = string_in.split(': ')
